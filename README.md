@@ -40,16 +40,18 @@
 ---
 
 ## 4) โครงสร้างโฟลเดอร์ (สิ่งที่ต้องมี)
+```
 .
 ├── wavs/
-│ ├── <speaker_id>/*.wav
-│ └── ...
+│  ├── <speaker_id>/*.wav
+│  └── ...
 ├── manifests/
-│ ├── train.jsonl
-│ └── val.jsonl
+│  ├── train.jsonl
+│  └── val.jsonl
 ├── metadata.csv
 └── eda/
-└── *.html
+   └── *.html
+```
 
 ---
 
@@ -69,11 +71,11 @@
 ---
 
 ## 5) Manifest format (Qwen3-TTS)
-แต่ละบรรทัดใน `train.jsonl / val.jsonl` มีรูปแบบใกล้เคียง:
+แต่ละบรรทัดใน `train.jsonl` และ `val.jsonl` มีรูปแบบใกล้เคียง:
 ```json
 {"key":"<utt_id>","text":"<transcript>","audio_path":"wavs/<speaker>/<utt_id>.wav","speaker_id":"<speaker>","language":"<lang>"}
-
->ข้อควรระวัง: ห้ามย้าย/เปลี่ยนชื่อไฟล์ wav หากไม่ regenerate manifests ใหม่
+```
+ข้อควรระวัง: ห้ามย้าย/เปลี่ยนชื่อไฟล์ wav หากไม่ regenerate manifests ใหม่
 
 ---
 
@@ -91,5 +93,5 @@
 
 ---
 
-8) หมายเหตุเรื่องการแชร์ (สำคัญ)
+## 8) หมายเหตุเรื่องการแชร์ (สำคัญ)
 ชุดข้อมูลนี้มาจากแหล่งสาธารณะ (เช่น YouTube) จึงควรใช้เพื่อการเรียน/งานในทีมตามขอบเขตที่เหมาะสม และหลีกเลี่ยงการเผยแพร่สาธารณะถ้ามีข้อจำกัดด้านลิขสิทธิ์ของแหล่งที่มา
