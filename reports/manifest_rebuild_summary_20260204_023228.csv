@@ -1,0 +1,3 @@
+manifest,rows_before,rows_exist,rows_copied,rows_dropped
+stage1_thai.jsonl,1623,1623,1623,0
+stage2_multi.jsonl,811,0,0,811
